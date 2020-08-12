@@ -1,0 +1,40 @@
+<jxb:bindings version="2.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- ====================================================== -->
+<!-- ========== RESOLVE NAMING CONFLICT: 'title' ========== -->
+<!-- ====================================================== -->
+
+    <!--========== gmlProfile/xlinks.xsd ==========-->
+    <jxb:bindings schemaLocation="http://www.w3.org/1999/xlink.xsd" node="/xsd:schema">
+
+        <jxb:bindings node="//xsd:attributeGroup[@name='arcAttrs']">
+            <jxb:bindings node=".//xsd:attribute[@ref='xlink:title']">
+                <jxb:property name="titleArcAttrs"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+        <jxb:bindings node="//xsd:attributeGroup[@name='locatorAttrs']">
+            <jxb:bindings node=".//xsd:attribute[@ref='xlink:title']">
+                <jxb:property name="titleLocatorAttrs"/>
+            </jxb:bindings>
+        </jxb:bindings>
+
+    </jxb:bindings>
+<!-- ====================================================== -->
+
+ 
+<!-- ===================================================== -->
+<!-- ========== RESOLVE NAMING CONFLICT: 'name' ========== -->
+<!-- ===================================================== -->
+
+    <!--========== gmlProfilexplan.xsd ==========-->
+    <jxb:bindings schemaLocation="schemata/XPlanGML_5_1_Schemata/gmlProfile/gmlProfilexplan.xsd">	
+    	<jxb:bindings node="//xsd:group[@name='StandardObjectProperties']">
+    		<jxb:bindings node="//xsd:element[@ref='gml:name']">
+    			<jxb:property name="nameStandardObjectProperties"/>
+    		</jxb:bindings>
+    	</jxb:bindings>
+    </jxb:bindings>
+<!-- ===================================================== -->    
+
+</jxb:bindings>
