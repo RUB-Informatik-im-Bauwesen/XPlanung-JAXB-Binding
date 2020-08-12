@@ -2,23 +2,15 @@ package app;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.nio.charset.Charset;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamReader;
 
-import com.sun.org.apache.xerces.internal.impl.io.UTF8Reader;
-
 import de.xplanung.xplangml._4._1.BPGeometrieobjektType;
-import de.xplanung.xplangml._4._1.XPlanAuszugType;
 import net.opengis.gml._3.AbstractFeatureCollectionType;
 import net.opengis.gml._3.AbstractGeometryType;
 import net.opengis.gml._3.FeaturePropertyType;
